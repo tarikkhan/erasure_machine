@@ -1,11 +1,12 @@
-var sample_text, sample_link, dragger, textbox, submit, cleartext, realData, workbox, spacing;
+var sample_text, sample_link, dragger, textbox, submit, cleartext, workbox, spacing;
 
 function preload() {
+  //this helps to get the file when clicked on the link
   sample_text = loadStrings('text.txt');
-
 }
 
 function formatText(src) {
+  //this function helps to show the paragraphs in the textarea section when the text is loaded.
   let linebreaks = '\n\n';
   let result = join(src, linebreaks);
   return result;
@@ -33,6 +34,7 @@ function setup() {
 }
 
 function readyApp() {
+  //this function adds the text in the box where the words can be clicked. It makes the words ready to get attached to //events.
   let c = textbox.value();
   let arr = c.split(' ');
   let box = [];
@@ -81,7 +83,8 @@ function unhighlight() {
   dragger.style('background-color', '#fff');
 }
 
-function clearAll () {
+function clearAll() {
+  //this function clears the textarea and the working div section at bottom
   textbox.value("");
   workbox.html("");
 }
