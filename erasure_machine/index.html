@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>1.6</title>
+
+  <script src="../libraries/p5.js"></script>
+  <script src="../libraries/p5.dom.js"></script>
+  <script src="../libraries/p5.sound.js"></script>
+  <script src="sketch.js"></script>
+
+  <style>
+    body {
+      padding: 10px;
+    }
+    
+    h1 {
+      margin: 10px 0px 0px 0px;
+    }
+
+    p {
+      margin: 20px 0px 0px 0px;
+    }
+
+    button {
+      margin: 12px 0px 0px 0px;
+      padding: 5px 10px;
+      display: block;
+    }
+
+    textarea {
+      padding: 5px;
+      margin: 20px 0px 0px 0px;
+    }
+
+    div#sample_link {
+      margin: 20px 0px 0px 0px;
+      text-decoration: underline;
+      color: cornflowerblue;
+      cursor: pointer;
+    }
+
+    div#dragger {
+      width: 20%;
+      padding: 15px 30px;
+      border: 2px dashed #ccc;
+      text-align: center;
+      margin: 20px 0px 0px 0px;
+    }
+    
+    div#workbox {
+      padding: 5px;
+      margin: 20px 0px 0px 0px;
+      border: 1px solid #000;
+    }
+    
+    div#workbox div:hover {
+      background-color: #ccc;
+      padding:2px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Erasure Machine</h1>
+  <p>TThis page takes inspiration from Erasure poetry. Each word is erased upon clicking, the original spacing of the text can be maintained by selecting "keep spacing." Some other ideas are (a) remove all instances of a given word, (b) remove a random assortment of words.
+  </p>
+  <div id="sample_link">Use Text Sample</div>
+  <div id="dragger">Drag a file</div>
+  <textarea id="textarea" cols="70" rows="10">Add some text</textarea>
+  <p><input type="checkbox" id="spacing" checked /> Adjust Spacing</p>
+  <button id="submit">Submit</button>
+  <button id="clear">Clear</button>
+  <div id="workbox"></div>
+</body>
+
+</html>
